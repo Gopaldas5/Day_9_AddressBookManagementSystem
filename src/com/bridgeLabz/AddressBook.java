@@ -12,7 +12,7 @@ public class AddressBook {
      System.out.println("Enter the First Name:- ");
      String firstName = scanner.next();
      System.out.println("Enter the Last Name:- ");
-     String lastName = scanner.next();
+     String lastname = scanner.next();
      System.out.println("Enter the Address :- ");
      String address = scanner.next();
      System.out.println("Enter the Name of city:- ");
@@ -25,10 +25,18 @@ public class AddressBook {
      String phoneNumber = scanner.next();
      System.out.println("Enter the Email:-");
      String email = scanner.next();
-     Contact contact = new Contact(firstName,lastName,address, city, state, pin, phoneNumber, email );
+     Contact contact = new Contact(firstName,lastname,address, city, state, pin, phoneNumber, email );
      list.add(contact);
+ }
+ public void editContact(){
+     System.out.println("Please Enter the name first to edit :-");
+     String editName = scanner.next();
+     for(Contact contact:list){
+         if(contact.getFirstName().equals(contact.getFirstName())){
+             contact.editExistingContact();
+         }
 
-
+     }
 
  }
 }
