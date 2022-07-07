@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AddressBook {
-//    Contact contact;
     static Scanner scanner = new Scanner(System.in);
     ArrayList<Contact> list = new ArrayList();
 
@@ -44,8 +43,9 @@ public class AddressBook {
      String deleteName = scanner.next();
      for(Contact contact:list){
          if(contact.getFirstName().equals(deleteName)){
+             list.remove(contact);
              contact.deleteExistingContact();
          }
      }
- }
+  }
 }
